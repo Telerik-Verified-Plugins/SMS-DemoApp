@@ -8,7 +8,7 @@
             if (window.sms === undefined) {
                 alert('Plugin not available. Are you running in the simulator?');
             } else {
-                window.sms.send('+31650298958', 'Hi there!', 'INTENT', this.onSuccess, this.onError);
+                window.sms.send('0123456789', 'Hi there!', 'INTENT', this.onSuccess, this.onError);
             }
         },
         
@@ -16,7 +16,7 @@
             if (window.sms === undefined) {
                 alert('Plugin not available. Are you running in the simulator?');
             } else {
-                window.sms.send('+31650298958', 'Hi there!', '', this.onSuccess, this.onError);
+                window.sms.send('0123456789', 'Hi there!', '', this.onSuccess, this.onError);
             }
         },
         
