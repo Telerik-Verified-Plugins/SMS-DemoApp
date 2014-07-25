@@ -6,13 +6,13 @@
 
         sendInteractiveSMS: function () {
             if (!this.checkSimulator()) {
-                window.sms.send('+31650298958', 'Hi there!', 'INTENT', this.onSuccess, this.onError);
+                window.sms.send('0123456789', 'Hi there!', 'INTENT', this.onSuccess, this.onError);
             }
         },
         
         sendNonInteractiveSMS: function () {
             if (!this.checkSimulator()) {
-                window.sms.send('+31650298958', 'Hi there!', '', this.onSuccess, this.onError);
+                window.sms.send('0123456789', 'Hi there!', '', this.onSuccess, this.onError);
             }
         },
         
