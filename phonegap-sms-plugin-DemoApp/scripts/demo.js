@@ -6,13 +6,23 @@
 
         sendInteractiveSMS: function () {
             if (!this.checkSimulator()) {
-                window.sms.send('0123456789', 'Hi there!', 'INTENT', this.onSuccess, this.onError);
+                var options = {
+                  android: {
+                    intent: 'INTENT'
+                  }
+                };
+                window.sms.send('0123456789', 'Hi there!', options, this.onSuccess, this.onError);
             }
         },
         
         sendNonInteractiveSMS: function () {
             if (!this.checkSimulator()) {
-                window.sms.send('0123456789', 'Hi there!', '', this.onSuccess, this.onError);
+                var options = {
+                  android: {
+                    intent: ''
+                  }
+                };
+                window.sms.send('0123456789', 'Hi there!', options, this.onSuccess, this.onError);
             }
         },
         

@@ -32,8 +32,12 @@
         [composeViewController setBody:body];
     }
     
-    NSArray* recipients = [command.arguments objectAtIndex:0];
+    NSMutableArray* recipients = [command.arguments objectAtIndex:0];
     if (recipients != nil) {
+        if ([recipients.firstObject isEqual: @""]) {
+            [recipients replaceObjectAtIndex:0 withObject:@"?"];
+        }
+        
         [composeViewController setRecipients:recipients];
     }
     
@@ -69,13 +73,15 @@
     [self.viewController dismissViewControllerAnimated:YES completion:nil];
     
     if(webviewResult == 1) {
-        [super writeJavascript:[[CDVPluginResult resultWithStatus:CDVCommandStatus_OK
-                                                  messageAsString:message]
-                                toSuccessCallbackString:self.callbackID]];
+        CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK
+                                                          messageAsString:message];
+        
+        [self.commandDelegate sendPluginResult:pluginResult callbackId:self.callbackID];
     } else {
-        [super writeJavascript:[[CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR
-                                                  messageAsString:message]
-                                toErrorCallbackString:self.callbackID]];
+        CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR
+                                                          messageAsString:message];
+
+        [self.commandDelegate sendPluginResult:pluginResult callbackId:self.callbackID];
     }
 }
 

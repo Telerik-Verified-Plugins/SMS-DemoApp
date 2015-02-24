@@ -4,7 +4,7 @@
   "AppIdentifier": "com.telerik.plugindemo.sms",
   "ProjectName": "phonegap-sms-plugin-DemoApp",
   "IsRunnable": "true",
-  "FrameworkVersion": "3.5.0",
+  "FrameworkVersion": "3.7.0",
   "AndroidPermissions": [
     "android.permission.CAMERA",
     "android.permission.VIBRATE",
@@ -61,5 +61,8 @@
   "DisplayName": "SMS plugin demo",
   "Description": "phonegap-sms-plugin-DemoApp",
   "Author": "Telerik",
-  "Framework": "Cordova"
+  "Framework": "Cordova",
+  "projectVersion": "1",
+  "WP8PublisherID": "{04414284-f443-4096-9fbc-0aed2e958a4b}",
+  "WP8ProductID": "{9d61a051-3396-40ae-acd5-2e02307c6079}"
 }
