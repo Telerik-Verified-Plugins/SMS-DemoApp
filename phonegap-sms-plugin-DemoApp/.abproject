@@ -4,7 +4,7 @@
   "AppIdentifier": "com.telerik.plugindemo.sms",
   "ProjectName": "phonegap-sms-plugin-DemoApp",
   "IsRunnable": "true",
-  "FrameworkVersion": "3.7.0",
+  "FrameworkVersion": "4.0.0",
   "AndroidPermissions": [
     "android.permission.CAMERA",
     "android.permission.VIBRATE",
@@ -26,32 +26,33 @@
     "android.permission.BROADCAST_STICKY"
   ],
   "CorePlugins": [
-    "org.apache.cordova.battery-status",
-    "org.apache.cordova.camera",
-    "org.apache.cordova.media-capture",
-    "org.apache.cordova.console",
-    "org.apache.cordova.contacts",
-    "org.apache.cordova.device",
-    "org.apache.cordova.device-motion",
-    "org.apache.cordova.device-orientation",
-    "org.apache.cordova.file",
-    "org.apache.cordova.file-transfer",
-    "org.apache.cordova.geolocation",
-    "org.apache.cordova.globalization",
-    "org.apache.cordova.inappbrowser",
-    "org.apache.cordova.media",
-    "org.apache.cordova.network-information",
-    "org.apache.cordova.dialogs",
-    "org.apache.cordova.splashscreen",
-    "org.apache.cordova.statusbar",
-    "org.apache.cordova.vibration"
+    "cordova-plugin-battery-status",
+    "cordova-plugin-camera",
+    "cordova-plugin-console",
+    "cordova-plugin-contacts",
+    "cordova-plugin-crosswalk-webview@1.2.0",
+    "cordova-plugin-device",
+    "cordova-plugin-device-motion",
+    "cordova-plugin-device-orientation",
+    "cordova-plugin-dialogs",
+    "cordova-plugin-file",
+    "cordova-plugin-file-transfer",
+    "cordova-plugin-geolocation",
+    "cordova-plugin-globalization",
+    "cordova-plugin-inappbrowser",
+    "cordova-plugin-media",
+    "cordova-plugin-media-capture",
+    "cordova-plugin-network-information",
+    "cordova-plugin-splashscreen",
+    "cordova-plugin-statusbar",
+    "cordova-plugin-vibration"
   ],
   "DeviceOrientations": [
     "Portrait",
     "Landscape"
   ],
   "iOSStatusBarStyle": "Default",
-  "AndroidHardwareAcceleration": "false",
+  "AndroidHardwareAcceleration": "true",
   "WP8SupportedResolutions": [
     "ID_RESOLUTION_WVGA",
     "ID_RESOLUTION_WXGA",
@@ -64,5 +65,7 @@
   "Framework": "Cordova",
   "projectVersion": "1",
   "WP8PublisherID": "{04414284-f443-4096-9fbc-0aed2e958a4b}",
-  "WP8ProductID": "{9d61a051-3396-40ae-acd5-2e02307c6079}"
+  "WP8ProductID": "{9d61a051-3396-40ae-acd5-2e02307c6079}",
+  "WP8WindowsPublisherName": "CN=Telerik",
+  "WP8PackageIdentityName": "1234Telerik.com.telerik.plugindemo.sms"
 }
